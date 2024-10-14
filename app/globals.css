@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #2D2821;
+  --primary: #CE8E59;
+  --secondary: #222121;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-primary)
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes text-slide1 {
+  0% {
+    transform: translateY(0);
+  }
+  20%,30% {
+    transform: translateY(-2rem);
+  }
+  45%,55% {
+    transform: translateY(-4rem);
+  }
+  70%,80% {
+    transform: translateY(-6rem);
+  }
+  95%,5% {
+    transform: translateY(0);
+  }
+}
+.animate-text-slide1 {
+  animation: text-slide1 5s infinite;
+}
+
+@keyframes text-slide2 {
+  0% {
+    transform: translateY(0);
+  }
+  28%,38% {
+    transform: translateY(-4rem);
+  }
+  61%,71% {
+    transform: translateY(-8rem);
+  }
+  94%, 5% {
+    transform: translateY(0);
+  }
+}
+.animate-text-slide2 {
+  animation: text-slide2 5s infinite;
+}
