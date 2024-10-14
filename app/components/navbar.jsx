@@ -18,6 +18,12 @@ export default function Navbar() {
     }
   }
 
+  const closeNavbar = () => {
+    if (!ref.current.classList.contains('max-lg:hidden')) {
+      ref.current.classList.add('max-lg:hidden');
+    }
+  }
+
   useEffect(() => {
     window.document.addEventListener('click', handleClickOutside);
     return () => window.document.removeEventListener('click', handleClickOutside);
@@ -39,13 +45,12 @@ export default function Navbar() {
           </button>
           <nav ref={ref} className="max-lg:hidden max-lg:absolute max-lg:top-full max-lg:right-0 max-lg:bg-white max-lg:p-6 max-lg:min-w-36 max-lg:rounded-md max-lg:shadow-lg static">
             <ul className="flex gap-10 items-center text-sm font-medium max-lg:h-full max-lg:flex-col max-lg:items-start max-lg:gap-4 max-lg:justify-center max-lg:text-secondary">
-              <li><Link href="/about" className={`${isActive('about') ? 'text-primary font-bold' : ''}`}>About</Link></li>
-              <li><Link href="/" className={`${isActive(null) ? 'text-primary font-bold' : ''}`}>Home</Link></li>
-              <li><Link href="/services" className={`${isActive('services') ? 'text-primary font-bold' : ''}`}>Services</Link></li>
-              <li><Link href="/hire-us" className={`${isActive('hire-us') ? 'text-primary font-bold' : ''}`}>Hire us</Link></li>
+              <li><Link onClick={closeNavbar} href="/about" className={`${isActive('about') ? 'text-primary font-bold' : ''}`}>About</Link></li>
+              <li><Link onClick={closeNavbar} href="/" className={`${isActive(null) ? 'text-primary font-bold' : ''}`}>Home</Link></li>
+              <li><Link onClick={closeNavbar} href="/services" className={`${isActive('services') ? 'text-primary font-bold' : ''}`}>Services</Link></li>
+              <li><Link onClick={closeNavbar} href="/hire-us" className={`${isActive('hire-us') ? 'text-primary font-bold' : ''}`}>Hire us</Link></li>
             </ul>
           </nav>
-
         </div>
       </div>
     </div>
