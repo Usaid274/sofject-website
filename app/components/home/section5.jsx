@@ -6,27 +6,27 @@ import Section5Img4 from "@/app/assets/home/section5-4.png";
 
 export default function Section5() {
   return (
-    <section id="contact" className="py-24 max-w-screen-2xl mx-auto grid grid-cols-[1fr_1.6fr] gap-12 max-md:grid-cols-1 w-full">
+    <section id="contact" className="py-24 max-sm:py-12 max-w-screen-2xl mx-auto grid grid-cols-[1fr_1.6fr] gap-12 max-md:grid-cols-1 w-full">
       <div className="pl-4 max-md:px-4">
-        <h2 className="text-4xl font-bold max-w-96 max-sm:text-2xl max-sm:max-w-full">
+        <h2 className="text-4xl font-bold max-sm:text-2xl max-sm:max-w-full">
           Lorem ipsum dolor sit amet consectetur
         </h2>
 
         <div className="grid grid-cols-2 gap-2 justify-stretch mt-6 w-full min-h-80">
           <div className="flex flex-col gap-2 w-full h-full">
             <div className="h-60 flex-1 basis-4/5">
-              <Image width="170" height="250" className="rounded-2xl h-full w-full object-cover" src={Section5Img1} />
+              <Image width="550" height="840" className="rounded-2xl h-full w-full object-cover" src={Section5Img1} alt="People working in office" />
             </div>
             <div className="h-16 basis-1/5">
-              <Image width="170" height="60" className="rounded-2xl h-full w-full object-cover" src={Section5Img2} />
+              <Image width="550" height="210" className="rounded-2xl h-full w-full object-cover" src={Section5Img2} alt="A man working on his laptop" />
             </div>
           </div>
           <div className="flex flex-col gap-2 w-full h-full">
             <div className="h-16 basis-1/5">
-              <Image width="170" height="60" className="rounded-2xl h-full w-full object-cover" src={Section5Img3} />
+              <Image width="550" height="210" className="rounded-2xl h-full w-full object-cover" src={Section5Img3} alt="A computer screen" />
             </div>
             <div className="h-60 flex-1 basis-4/5">
-              <Image width="170" height="250" className="rounded-2xl h-full w-full object-cover" src={Section5Img4} />
+              <Image width="550" height="840" className="rounded-2xl h-full w-full object-cover" src={Section5Img4} alt="A computer screen" />
             </div>
           </div>
         </div>
@@ -42,11 +42,11 @@ export default function Section5() {
             Contact us
           </h3>
           <form>
-            <div className="flex flex-col gap-4 mt-8">
-              <input type="text" className="border-b bg-transparent p-4 w-full focus-visible:outline-none focus-visible:border-primary" placeholder="First name" />
-              <input type="text" className="border-b bg-transparent p-4 w-full focus-visible:outline-none focus-visible:border-primary" placeholder="Phone number" />
-              <input type="text" className="border-b bg-transparent p-4 w-full focus-visible:outline-none focus-visible:border-primary" placeholder="Email" />
-              <input type="text" className="border-b bg-transparent p-4 w-full focus-visible:outline-none focus-visible:border-primary" placeholder="Message" />
+            <div className="flex flex-col gap-4 mt-8 *:border-b *:bg-transparent *:p-4 *:w-full focus-visible:*:outline-none focus-visible:*:border-primary">
+              <input type="text" placeholder="Full name" />
+              <input type="text" placeholder="Phone number" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Message" />
             </div>
             <button className="bg-primary rounded-full text-sm font-semibold py-3 px-6 mt-12 block max-md:ml-auto">
               Contact us

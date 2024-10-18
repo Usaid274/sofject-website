@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image';
 import { StarIcon } from 'lucide-react';
@@ -15,6 +15,8 @@ export default function TestimonialCarousel(props) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
 
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
@@ -86,7 +88,7 @@ export default function TestimonialCarousel(props) {
           {slides.map((t, index) => (
             <div className="embla__slide [transform:translate3d(0,0,0)] flex-[0_0_var(--slide-size)] min-w-0 pl-[var(--slide-spacing)]" key={index}>
               <article className="embla__slide__number h-[--slide-height] select-none border-2 border-primary rounded-2xl p-8 max-sm:p-4 flex justify-center items-center flex-col max-w-96 w-full">
-                <Image width="144" height="144" className="size-36 rounded-full object-cover mx-auto" src={t.img.src} />
+                <Image width="144" height="144" className="size-36 rounded-full object-cover mx-auto" src={t.img.src} alt={`Photo of ${t.name}`} />
 
                 <p className="font-serif text-2xl text-center mt-2 max-sm:text-lg">{t.name}</p>
 
@@ -108,8 +110,66 @@ export default function TestimonialCarousel(props) {
             </div>
           ))}
         </div>
+
+      </div>
+      
+      <div className="embla__dots flex gap-3 justify-center items-center mt-6">
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            data-selected={index === selectedIndex}
+            className={`embla__dot size-3 bg-neutral-400 rounded-full data-[selected=true]:bg-primary`}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
+function useDotButton(emblaApi, onButtonClick) {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
+
+  const onDotButtonClick = useCallback(
+    (index) => {
+      if (!emblaApi) return
+      emblaApi.scrollTo(index)
+      if (onButtonClick) onButtonClick(emblaApi)
+    },
+    [emblaApi, onButtonClick]
+  )
+
+  const onInit = useCallback((emblaApi) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = useCallback((emblaApi) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onInit(emblaApi)
+    onSelect(emblaApi)
+
+    emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
+  return {
+    selectedIndex,
+    scrollSnaps,
+    onDotButtonClick
+  }
+}
+
+function DotButton(props) {
+  const { children, ...restProps } = props
+
+  return (
+    <button type="button" {...restProps}>
+      {children}
+    </button>
+  )
+}

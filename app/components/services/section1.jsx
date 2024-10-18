@@ -12,24 +12,26 @@ export default function Section1() {
   const [selectedTab, setSelectedTab] = useState('Mobile App');
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 max-sm:py-12">
       <Heading headingText="Lorem ipsum dolor sit amet consectetur. Nam praesent viverra vel tortor nullam interdum.">
         <span className="text-primary">Our</span>
         <span> Services</span>
       </Heading>
 
-      <div className="mt-12 max-w-screen-2xl mx-auto overflow-x-auto w-full">
-        <div className="flex gap-4 [justify-content:safe_center] items-center w-full">
-          <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Mobile App" />
-          <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Web App" />
-          <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Web Design" />
-          <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Graphic Design" />
+      <div className="px-4 mt-12 max-w-screen-2xl mx-auto w-full">
+        <div className="overflow-x-auto w-full">
+          <div className="flex gap-4 [justify-content:safe_center] items-center w-full">
+            <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Mobile App" />
+            <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Web App" />
+            <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Web Design" />
+            <TabBtn selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabName="Graphic Design" />
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-14 grid max-w-screen-2xl grid-flow-col grid-cols-3 justify-items-center w-full overflow-hidden max-lg:gap-x-0 max-xl:gap-x-16 gap-x-32 gap-y-8 max-lg:grid-cols-2 max-lg:grid-flow-row">
-        <div className="row-span-2 max-lg:row-span-1 flex items-center">
-          <Image width="600" height="1000" src={Section1Img1.src} className="w-80 max-lg:w-1/2 mx-auto aspect-[9/16] rounded-3xl max-sm:rounded-md object-cover" />
+      <div className="mx-auto px-4 mt-14 grid max-w-screen-2xl grid-flow-col grid-cols-3 justify-items-center w-full overflow-hidden max-lg:gap-x-0 max-xl:gap-x-16 gap-x-32 gap-y-8 max-lg:grid-cols-2 max-lg:grid-flow-row">
+        <div className="row-span-2 max-lg:row-span-1 flex items-center justify-self-end max-lg:justify-self-start">
+          <Image width="600" height="1000" src={Section1Img1.src} className="w-full h-full mx-auto max-lg:w-9/12 rounded-3xl max-sm:rounded-md object-cover" alt="" />
         </div>
 
         <div>
@@ -58,8 +60,8 @@ export default function Section1() {
         </div>
 
         <div className="row-span-2 max-lg:row-span-1 min-h-[480px] w-full relative max-lg:border-t max-lg:pt-8">
-          <Image width="512" height="900" src={Section1Img3.src} className="absolute left-1/2 top-1/2 w-3/5 aspect-[9/16] -translate-x-1/2 -translate-y-1/2 scale-75 rounded-2xl object-cover shadow-md max-md:left-3/4 max-sm:top-8 max-sm:translate-y-0 max-sm:rounded-md" />
-          <Image width="512" height="900" src={Section1Img2.src} className="absolute left-0 top-1/2 w-3/5 aspect-[9/16] -translate-y-1/2 rounded-2xl object-cover shadow-md max-md:left-1/2 max-md:-translate-x-1/2 max-sm:top-8 max-sm:translate-y-0 max-sm:rounded-md" />
+          <Image width="512" height="900" src={Section1Img3.src} className="absolute left-1/2 top-1/2 w-3/5 aspect-[9/16] -translate-x-1/2 -translate-y-1/2 scale-75 rounded-2xl object-cover shadow-md max-md:left-3/4 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
+          <Image width="512" height="900" src={Section1Img2.src} className="absolute left-0 top-1/2 w-3/5 aspect-[9/16] -translate-y-1/2 rounded-2xl object-cover shadow-md max-md:left-1/2 max-md:-translate-x-1/2 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
         </div>
       </div>
     </section>
@@ -91,7 +93,7 @@ const tabContent = {
 
 function TabBtn({ tabName, selectedTab, setSelectedTab }) {
   return (
-    <button onClick={() => setSelectedTab(tabName)} className={`border border-primary rounded-full py-3.5 px-12 font-bold min-w-max ${selectedTab === tabName ? 'bg-primary text-white' : 'text-primary'}`}>
+    <button onClick={() => setSelectedTab(tabName)} className={`border border-primary rounded-full py-3.5 px-12 max-sm:py-3 max-sm:px-8 max-sm:text-sm font-bold min-w-max ${selectedTab === tabName ? 'bg-primary text-white' : 'text-primary'}`}>
       {tabName}
     </button>
   );

@@ -5,11 +5,11 @@ import Section4Img from "@/app/assets/home/section4-1.jpeg";
 
 export default function Section4() {
   return (
-    <section id="testimonials" className="py-24">
+    <section id="testimonials" className="py-12 scroll-mt-12">
       <h2 className="uppercase max-w-5xl mx-auto p-4 rounded-md bg-primary text-white text-5xl max-md:text-3xl max-sm:text-2xl max-sm:p-2 font-semibold flex items-center justify-center">
         <span>Testim</span>
         <span className="sr-only">o</span>
-        <Image width="40" height="40" className="size-10 inline-block" src={TestimonialIcon.src} />
+        <Image width="40" height="40" className="size-10 inline-block" src={TestimonialIcon.src} aria-hidden alt="Heart icon" />
         <span>nials</span>
       </h2>
 

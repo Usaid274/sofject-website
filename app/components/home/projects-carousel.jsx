@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useCallback, useState, useEffect, useRef } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import React, { useCallback, useState, useEffect, useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
 import Image from "next/image";
 import Section3Img1 from "@/app/assets/home/section3-1.png";
@@ -24,7 +24,7 @@ export default function ProjectsCarousel() {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
+    onNextButtonClick,
   } = usePrevNextButtons(emblaApi)
 
   const setTweenNodes = useCallback((emblaApi) => {
@@ -74,7 +74,7 @@ export default function ProjectsCarousel() {
         tweenNode.style.transform = `scale(${scale})`
       })
     })
-  }, [])
+  }, []);
 
   const updateSlideClasses = useCallback((emblaApi) => {
     const slides = emblaApi.slideNodes();
@@ -145,7 +145,7 @@ export default function ProjectsCarousel() {
             </div>
           </div>
 
-          <div className="mt-4 flex items-center gap-16">
+          <div className="mt-4 flex items-center justify-center gap-16">
             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
           </div>
@@ -196,11 +196,11 @@ function PrevButton(props) {
 
   return (
     <button
-      className="embla__button embla__button--prev border-2 border-primary size-6 rounded-full relative focus-visible:outline-none"
+      className="embla__button embla__button--prev border-2 border-primary p-1 rounded-full relative focus-visible:outline-none"
       type="button"
       {...restProps}
     >
-      <MoveLeftIcon className="absolute size-8 text-primary -left-2 translate-x-1/2 top-1/2 -translate-y-1/2" />
+      <MoveLeftIcon className="size-6 text-primary " />
       {children}
     </button>
   )
@@ -211,11 +211,11 @@ function NextButton(props) {
 
   return (
     <button
-      className="embla__button embla__button--next border-2 border-primary size-6 rounded-full relative focus-visible:outline-none"
+      className="embla__button embla__button--next border-2 border-primary p-1 rounded-full relative focus-visible:outline-none"
       type="button"
       {...restProps}
     >
-      <MoveRightIcon className="absolute size-8 text-primary -right-2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
+      <MoveRightIcon className="size-6 text-primary" />
       {children}
     </button>
   )

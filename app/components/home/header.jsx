@@ -3,7 +3,7 @@ import HeroImage from "@/app/assets/home/hero1.png";
 
 export default function Header() {
   return (
-    <header className="max-w-screen-2xl mx-auto overflow-hidden px-4 pt-24 w-full grid grid-cols-[1fr_1.3fr] gap-x-4 gap-y-6 max-lg:grid-cols-1 max-lg:justify-items-center items-center">
+    <header className="max-w-screen-2xl mx-auto overflow-hidden px-4 pt-24 w-full grid grid-cols-[1fr_1.3fr] gap-x-4 gap-y-6 max-lg:grid-cols-1 max-lg:justify-items-center items-center max-sm:pt-12">
       <div className="lg:pb-24 justify-self-start">
         <div className="flex gap-2 uppercase text-sm max-sm:text-xs col-span-full overflow-hidden">
           <p className="font-medium">Services</p>
@@ -37,7 +37,7 @@ export default function Header() {
           </p>
         </div>
         <div className="basis-2/5 scale-125">
-          <Image src={HeroImage.src} className="w-full object-contain" width="2000" height="2000" />
+          <Image src={HeroImage.src} alt="A person using a computer" priority className="w-full object-contain" width="2000" height="2000" />
         </div>
       </div>
     </header>

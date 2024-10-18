@@ -10,8 +10,8 @@ const betterGrade = localFont({
 
 export default function Section1() {
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-screen-2xl mx-auto grid grid-cols-2 gap-6 max-lg:grid-cols-1 max-lg:justify-items-center">
+    <section className="py-24 px-4 max-sm:py-12">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-2 gap-6 max-lg:grid-cols-1 justify-items-center">
         <div className="w-full h-full min-h-[500px] relative max-w-lg max-sm:min-h-96 max-sm:max-w-sm">
           <div className="absolute top-0 left-0">
             <Image width="560" height="850" src={Section1Img1.src} className="object-cover w-72 h-96 rounded-lg max-sm:w-48 max-sm:h-64" />

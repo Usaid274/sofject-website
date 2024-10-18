@@ -5,9 +5,9 @@ import Footer from "@/app/components/footer";
 import "./globals.css";
 
 const modern20 = localFont({
-  src: "./fonts/MOD20.ttf",
+  src: './fonts/MOD20.ttf',
   weight: '400',
-  variable: "--font-secondary",
+  variable: '--font-secondary',
 });
 
 const montserrat = Montserrat({
