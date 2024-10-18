@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { MenuIcon } from "lucide-react";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
+import AnimatedLogo from "@/app/components/animated-logo";
 
 export default function Navbar() {
   const ref = useRef(null);
@@ -31,12 +32,14 @@ export default function Navbar() {
 
   const segment = useSelectedLayoutSegment();
 
-  const isActive = (href) => segment === href
+  const isActive = (href) => segment === href;
 
   return (
-    <div className="bg-secondary text-white p-4">
+    <div className="bg-secondary text-white p-6">
       <div className="max-w-screen-2xl mx-auto flex gap-2 justify-between items-center">
-        <img src="/logo.png" alt="Sofject logo" className="h-12" />
+        <div>
+          <AnimatedLogo />
+        </div>
 
         <div className="relative">
           <button className="max-lg:block hidden" onClickCapture={toggleNavbar}>
