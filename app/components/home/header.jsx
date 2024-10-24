@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroImage from "@/app/assets/home/hero1.png";
+import HeroImage from "@/app/assets/home/hero1.webp";
 
 export default function Header() {
   return (

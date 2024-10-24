@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Heading from "@/app/components/heading";
-import Section2Img1 from "@/app/assets/about/section2-1.png";
-import Section2Img2 from "@/app/assets/about/section2-2.png";
-import Section2Img3 from "@/app/assets/about/section2-3.png";
-import Section2Img4 from "@/app/assets/about/section2-4.png";
-import Section2Img5 from "@/app/assets/about/section2-5.png";
-import Section2Img6 from "@/app/assets/about/section2-6.png";
+import Section2Img1 from "@/app/assets/about/section2-1.webp";
+import Section2Img2 from "@/app/assets/about/section2-2.webp";
+import Section2Img3 from "@/app/assets/about/section2-3.webp";
+import Section2Img4 from "@/app/assets/about/section2-4.webp";
+import Section2Img5 from "@/app/assets/about/section2-5.webp";
+import Section2Img6 from "@/app/assets/about/section2-6.webp";
 
 export default function Section2() {
   return (

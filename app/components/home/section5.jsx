@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Section5Img1 from "@/app/assets/home/section5-1.png";
-import Section5Img2 from "@/app/assets/home/section5-2.png";
-import Section5Img3 from "@/app/assets/home/section5-3.png";
-import Section5Img4 from "@/app/assets/home/section5-4.png";
+import Section5Img1 from "@/app/assets/home/section5-1.webp";
+import Section5Img2 from "@/app/assets/home/section5-2.webp";
+import Section5Img3 from "@/app/assets/home/section5-3.webp";
+import Section5Img4 from "@/app/assets/home/section5-4.webp";
 
 export default function Section5() {
   return (

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import Section1Img1 from "@/app/assets/home/section1-1.png"
-import Section1Img2 from "@/app/assets/home/section1-2.png"
+import Section1Img1 from "@/app/assets/home/section1-1.webp"
+import Section1Img2 from "@/app/assets/home/section1-2.webp"
 
 export default function ServicesTab() {
   const [active, setActive] = useState('Mobile app');

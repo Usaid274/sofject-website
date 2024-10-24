@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import Image from "next/image";
-import Section1Img1 from "@/app/assets/about/section1-1.png";
-import Section1Img2 from "@/app/assets/about/section1-2.png";
+import Section1Img1 from "@/app/assets/about/section1-1.webp";
+import Section1Img2 from "@/app/assets/about/section1-2.webp";
 
 const betterGrade = localFont({
   src: "../../fonts/BetterGrade.otf",

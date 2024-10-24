@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TestimonialCarousel from "./testimonial-carousel";
 import TestimonialIcon from "@/app/assets/home/testimonial-icon.svg";
-import Section4Img from "@/app/assets/home/section4-1.jpeg";
+import Section4Img from "@/app/assets/home/section4-1.webp";
 
 export default function Section4() {
   return (

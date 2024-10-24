@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Heading from "@/app/components/heading";
-import Section1Img1 from "@/app/assets/services/section1-1.png"
-import Section1Img2 from "@/app/assets/home/section3-1.png"
-import Section1Img3 from "@/app/assets/home/section3-2.png"
+import Section1Img1 from "@/app/assets/services/section1-1.webp"
+import Section1Img2 from "@/app/assets/home/section3-1.webp"
+import Section1Img3 from "@/app/assets/home/section3-2.webp"
 import AwardIcon from "@/app/assets/services/award-icon.svg"
 
 export default function Section1() {

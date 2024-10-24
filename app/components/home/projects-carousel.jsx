@@ -4,11 +4,11 @@ import React, { useCallback, useState, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
 import Image from "next/image";
-import Section3Img1 from "@/app/assets/home/section3-1.png";
-import Section3Img2 from "@/app/assets/home/section3-2.png";
-import Section3Img3 from "@/app/assets/home/section3-3.png";
-import Section3Img4 from "@/app/assets/home/section3-4.png";
-import Section4Img from "@/app/assets/home/section4-1.jpeg";
+import Section3Img1 from "@/app/assets/home/section3-1.webp";
+import Section3Img2 from "@/app/assets/home/section3-2.webp";
+import Section3Img3 from "@/app/assets/home/section3-3.webp";
+import Section3Img4 from "@/app/assets/home/section3-4.webp";
+import Section4Img from "@/app/assets/home/section4-1.webp";
 
 const TWEEN_FACTOR_BASE = 0.1;
 

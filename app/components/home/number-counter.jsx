@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, useAnimate, useInView, useMotionValue, useTransform } from "framer-motion";
-import Section2Img from "@/app/assets/home/section2-1.png";
+import Section2Img from "@/app/assets/home/section2-1.webp";
 
 export default function NumberCounter({ }) {
   const [scope, animate] = useAnimate();
