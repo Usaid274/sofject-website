@@ -3,7 +3,7 @@ import ProjectsCarousel from "./projects-carousel";
 
 export default function Section3() {
   return (
-    <section id="projects" className="py-24 max-sm:py-12">
+    <section id="projects" className="py-24 max-sm:py-12 scroll-mt-12">
       <Heading headingText="Check out the jobs we’ve successfully completed below">
         <span className="text-primary">What</span>
         <span> have we </span>

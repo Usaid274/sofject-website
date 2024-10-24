@@ -9,7 +9,7 @@ export default function Section4() {
       <h2 className="uppercase max-w-5xl mx-auto p-4 rounded-md bg-primary text-white text-5xl max-md:text-3xl max-sm:text-2xl max-sm:p-2 font-semibold flex items-center justify-center">
         <span>Testim</span>
         <span className="sr-only">o</span>
-        <Image width="40" height="40" className="size-10 inline-block" src={TestimonialIcon.src} aria-hidden alt="Heart icon" />
+        <Image width="40" height="40" className="size-10 inline-block max-md:size-8 max-sm:size-6" src={TestimonialIcon.src} aria-hidden alt="Heart icon" />
         <span>nials</span>
       </h2>
 

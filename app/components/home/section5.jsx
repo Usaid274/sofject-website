@@ -6,7 +6,7 @@ import Section5Img4 from "@/app/assets/home/section5-4.webp";
 
 export default function Section5() {
   return (
-    <section id="contact" className="py-24 max-sm:py-12 max-w-screen-2xl mx-auto grid grid-cols-[1fr_1.6fr] gap-12 max-md:grid-cols-1 w-full">
+    <section id="contact" className="py-24 max-sm:py-12 max-w-screen-2xl mx-auto grid grid-cols-[1fr_1.6fr] gap-12 max-md:grid-cols-1 w-full scroll-mt-12">
       <div className="pl-4 max-md:px-4">
         <h2 className="text-4xl font-bold max-sm:text-2xl max-sm:max-w-full">
           Lorem ipsum dolor sit amet consectetur
@@ -14,19 +14,19 @@ export default function Section5() {
 
         <div className="grid grid-cols-2 gap-2 justify-stretch mt-6 w-full min-h-80">
           <div className="flex flex-col gap-2 w-full h-full">
-            <div className="h-60 flex-1 basis-4/5">
-              <Image width="550" height="840" className="rounded-2xl h-full w-full object-cover" src={Section5Img1} alt="People working in office" />
+            <div className="h-60 flex-1 basis-4/5 rounded-2xl overflow-hidden">
+              <Image width="550" height="840" className="h-full w-full object-center object-cover scale-125 hover:scale-100 transition-transform duration-500" src={Section5Img1} alt="People working in office" />
             </div>
-            <div className="h-16 basis-1/5">
-              <Image width="550" height="210" className="rounded-2xl h-full w-full object-cover" src={Section5Img2} alt="A man working on his laptop" />
+            <div className="h-16 basis-1/5 rounded-2xl overflow-hidden">
+              <Image width="550" height="210" className="h-full w-full object-center object-cover scale-125 hover:scale-100 transition-transform duration-500" src={Section5Img2} alt="A man working on his laptop" />
             </div>
           </div>
           <div className="flex flex-col gap-2 w-full h-full">
-            <div className="h-16 basis-1/5">
-              <Image width="550" height="210" className="rounded-2xl h-full w-full object-cover" src={Section5Img3} alt="A computer screen" />
+            <div className="h-16 basis-1/5 rounded-2xl overflow-hidden">
+              <Image width="550" height="210" className="h-full w-full object-center object-cover scale-125 hover:scale-100 transition-transform duration-500" src={Section5Img3} alt="A computer screen" />
             </div>
-            <div className="h-60 flex-1 basis-4/5">
-              <Image width="550" height="840" className="rounded-2xl h-full w-full object-cover" src={Section5Img4} alt="A computer screen" />
+            <div className="h-60 flex-1 basis-4/5 rounded-2xl overflow-hidden">
+              <Image width="550" height="840" className="h-full w-full object-center object-cover scale-125 hover:scale-100 transition-transform duration-500" src={Section5Img4} alt="A computer screen" />
             </div>
           </div>
         </div>

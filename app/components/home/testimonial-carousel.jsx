@@ -82,13 +82,15 @@ export default function TestimonialCarousel(props) {
   }, [emblaApi, tweenScale])
 
   return (
-    <div className="embla max-w-7xl mx-auto [--slide-height:25rem] [--slide-spacing:1rem] [--slide-size:33%] max-sm:[--slide-size:65%] max-sm:[--slide-spacing:0.2rem] max-sm:[--slide-height:20rem]">
+    <div className="embla max-w-7xl mx-auto [--slide-height:25rem] [--slide-spacing:1rem] [--slide-size:33%] max-lg:[--slide-size:65%] max-lg:[--slide-spacing:0.2rem] max-lg:[--slide-height:24rem] max-sm:[--slide-height:20rem]">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex [touch-action:pan-y_pinch-zoom] ml-[calc(var(--slide-spacing)*-1)]">
           {slides.map((t, index) => (
-            <div className="embla__slide [transform:translate3d(0,0,0)] flex-[0_0_var(--slide-size)] min-w-0 pl-[var(--slide-spacing)]" key={index}>
+            <div className="embla__slide [transform:translate3d(0,0,0)] flex-[0_0_var(--slide-size)] min-w-0 max-w-max pl-[var(--slide-spacing)] cursor-grab active:cursor-grabbing" key={index}>
               <article className="embla__slide__number h-[--slide-height] select-none border-2 border-primary rounded-2xl p-8 max-sm:p-4 flex justify-center items-center flex-col max-w-96 w-full">
-                <Image width="144" height="144" className="size-36 rounded-full object-cover mx-auto" src={t.img.src} alt={`Photo of ${t.name}`} />
+                <div>
+                  <Image width="144" height="144" className="size-36 max-sm:size-24 max-md:size-28 rounded-full object-cover mx-auto" src={t.img.src} alt={`Photo of ${t.name}`} />
+                </div>
 
                 <p className="font-serif text-2xl text-center mt-2 max-sm:text-lg">{t.name}</p>
 
@@ -119,7 +121,7 @@ export default function TestimonialCarousel(props) {
             key={index}
             onClick={() => onDotButtonClick(index)}
             data-selected={index === selectedIndex}
-            className={`embla__dot size-3 bg-neutral-400 rounded-full data-[selected=true]:bg-primary`}
+            className={`embla__dot size-3 rounded-full data-[selected=true]:bg-primary border border-primary`}
           />
         ))}
       </div>

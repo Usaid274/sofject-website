@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const layoutTransition = { duration: 0.8, easings: ['easeOut'] }
+const layoutTransition = { duration: 1, easings: ['easeOut'] }
 const opacityTransition = { duration: 1, delay: 5 , easings: ['easeOut'] }
 
 export default function AnimatedLogo() {

@@ -24,6 +24,7 @@ export default function ServicesTab() {
       rotatation = 'rotate-[18deg] max-sm:rotate-[30deg] sm:max-lg:rotate-[24deg] lg:max-2xl:rotate-[27deg]'
       break;
     default:
+      rotatation = ''
       break;
   }
 
@@ -44,15 +45,15 @@ export default function ServicesTab() {
         ))}
       </ul>
 
-      <div className="border-t pt-2 px-4 max-w-screen-sm flex flex-col gap-4 max-lg:row-start-2 max-lg:col-span-full">
+      <div className="border-t pt-2 px-4 max-w-screen-sm flex flex-col gap-4 max-lg:row-start-2 max-lg:col-span-full max-sm:text-sm">
         {tabContent[active]}
       </div>
-        
-      <div className="flex gap-2 max-lg:col-start-2 w-full pr-4">
-        <div className="basis-3/4">
+
+      <div className="flex gap-2 max-lg:col-start-2 w-full pr-4 group">
+        <div className="basis-3/4 flex-1 transition-all duration-500 group-has-[:last-child:hover]:basis-1/4">
           <Image src={Section1Img1} alt="People working on their computers" className="rounded-lg object-cover h-96 w-auto max-sm:h-48" />
         </div>
-        <div className="basis-1/4">
+        <div className="basis-1/4 hover:basis-3/4 flex-1 transition-all duration-500">
           <Image src={Section1Img2} alt="A computer screen" className="rounded-lg object-cover object-right h-96 w-auto max-sm:h-48" />
         </div>
       </div>

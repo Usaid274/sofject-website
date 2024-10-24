@@ -42,26 +42,26 @@ export default function Section1() {
 
         <div className="border-t pt-8">
           <ul className="flex flex-col gap-4">
-            <li className="grid grid-cols-[24px_1fr] gap-4">
-              <Image width="24" height="24" src={AwardIcon.src} className="size-6 row-span-2" />
-              <h6 className="font-semibold">No compromise on quality</h6>
-              <p className="text-sm">
+            <li className="grid grid-cols-[24px_1fr] gap-4 max-sm:gap-2 items-center">
+              <Image width="24" height="24" src={AwardIcon.src} className="size-6 max-sm:size-5" />
+              <h6 className="font-semibold max-sm:text-sm">No compromise on quality</h6>
+              <p className="text-sm max-sm:text-xs col-start-2">
                 Lorem ipsum dolor sit amet consectetur. Nam praesent viverra tincidunt vel tortor nullam interdum. Sit id scelerisque nunc.
               </p>
             </li>
-            <li className="grid grid-cols-[24px_1fr] gap-4">
-              <Image width="24" height="24" src={AwardIcon.src} className="size-6 row-span-2" />
-              <h6 className="font-semibold">No compromise on quality</h6>
-              <p className="text-sm">
+            <li className="grid grid-cols-[24px_1fr] gap-4 max-sm:gap-2 items-center">
+              <Image width="24" height="24" src={AwardIcon.src} className="size-6 max-sm:size-5" />
+              <h6 className="font-semibold max-sm:text-sm">No compromise on quality</h6>
+              <p className="text-sm max-sm:text-xs col-start-2">
                 Lorem ipsum dolor sit amet consectetur. Nam praesent viverra tincidunt vel tortor nullam interdum. Sit id scelerisque nunc.
               </p>
             </li>
           </ul>
         </div>
 
-        <div className="row-span-2 max-lg:row-span-1 min-h-[480px] w-full relative max-lg:border-t max-lg:pt-8">
-          <Image width="512" height="900" src={Section1Img3.src} className="absolute left-1/2 top-1/2 w-3/5 aspect-[9/16] -translate-x-1/2 -translate-y-1/2 scale-75 rounded-2xl object-cover shadow-md max-md:left-3/4 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
-          <Image width="512" height="900" src={Section1Img2.src} className="absolute left-0 top-1/2 w-3/5 aspect-[9/16] -translate-y-1/2 rounded-2xl object-cover shadow-md max-md:left-1/2 max-md:-translate-x-1/2 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
+        <div className="row-span-2 max-lg:row-span-1 min-h-[480px] max-sm:min-h-80 w-full relative max-lg:border-t max-lg:pt-8">
+          <Image width="512" height="900" src={Section1Img3.src} className="absolute top-1/2 h-4/5 w-auto aspect-[9/16] -translate-x-1/2 -translate-y-1/2 scale-75 rounded-2xl object-cover shadow-md left-3/4 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
+          <Image width="512" height="900" src={Section1Img2.src} className="absolute top-1/2 h-4/5 w-auto aspect-[9/16] -translate-y-1/2 rounded-2xl object-cover shadow-md left-1/2 -translate-x-1/2 max-lg:top-8 max-lg:translate-y-0 max-sm:rounded-md" />
         </div>
       </div>
     </section>

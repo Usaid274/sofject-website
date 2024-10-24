@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${modern20.variable} scroll-smooth`}>
+    <html lang="en" className={`${montserrat.variable} ${modern20.variable} scroll-smooth selection:bg-primary selection:text-white`}>
       <body className="antialiased">
         <Navbar />
         {children}
